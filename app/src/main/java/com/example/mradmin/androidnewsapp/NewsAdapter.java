@@ -56,8 +56,11 @@ public class NewsAdapter extends BaseAdapter {
         TextView textViewDate = (TextView) view.findViewById(R.id.textViewNewsDate);
         TextView textViewDescription = (TextView) view.findViewById(R.id.textViewNewsDescription);
 
-        if (curNewsItem.getImage()!=null)
+        if (curNewsItem.getImage() != null && !curNewsItem.getImage().isEmpty()){
             Picasso.with(context).load(curNewsItem.getImage()).placeholder(R.mipmap.ic_launcher).into(imageView);
+        } else {
+            imageView.setImageResource(R.mipmap.ic_launcher);
+        }
 
         textViewTitle.setText(curNewsItem.getTitle());
         textViewDate.setText(curNewsItem.getDate());

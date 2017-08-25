@@ -23,8 +23,11 @@ public class NewsDetailActivity extends AppCompatActivity {
         TextView textViewDate = (TextView) findViewById(R.id.textViewNewsDateDetail);
         TextView textViewDescription = (TextView) findViewById(R.id.textViewNewsDescriptionDetail);
 
-        if (curNewsItem.getImage() != null)
+        if (curNewsItem.getImage() != null || !curNewsItem.getImage().isEmpty()){
             Picasso.with(NewsDetailActivity.this).load(curNewsItem.getImage()).placeholder(R.mipmap.ic_launcher).into(imageView);
+        } else {
+            imageView.setImageResource(R.mipmap.ic_launcher);
+        }
 
         textViewTitle.setText(curNewsItem.getTitle());
         textViewDate.setText(curNewsItem.getDate());
