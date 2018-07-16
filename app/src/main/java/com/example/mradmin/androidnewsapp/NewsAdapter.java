@@ -3,12 +3,11 @@ package com.example.mradmin.androidnewsapp;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.mradmin.androidnewsapp.Entities.NewsItem;
+import com.example.mradmin.androidnewsapp.entity.NewsItem;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

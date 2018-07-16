@@ -1,51 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:padding="8dp"
-    android:background="@drawable/news_row_shape">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageViewNewsImage"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginRight="4dp"/>
-
-    <TextView
-        android:id="@+id/textViewNewsTitle"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="title"
-        android:layout_toRightOf="@id/imageViewNewsImage"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:singleLine="true"/>
+        android:padding="8dp">
 
-    <TextView
-        android:id="@+id/textViewNewsDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageViewNewsImage"
-        android:layout_marginTop="2dp"
-        android:layout_below="@id/textViewNewsTitle"
-        android:text="date"
-        android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        <ImageView
+            android:id="@+id/imageViewNewsImage"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"/>
 
-    <TextView
-        android:id="@+id/textViewNewsDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageViewNewsImage"
-        android:layout_marginTop="14dp"
-        android:layout_below="@id/textViewNewsDate"
-        android:text="description"
-        android:textStyle="italic"
-        android:maxLines="4"
-        android:ellipsize="end"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        <TextView
+            android:id="@+id/textViewNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="title"
+            android:layout_toEndOf="@id/imageViewNewsImage"
+            android:textSize="20sp"
+            android:singleLine="true"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textViewNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageViewNewsImage"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/textViewNewsTitle"
+            tools:text="date"
+            android:singleLine="true"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/textViewNewsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageViewNewsImage"
+            android:layout_marginTop="14dp"
+            android:layout_below="@id/textViewNewsDate"
+            tools:text="description"
+            android:textStyle="italic"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_overlay"/>
+
+</LinearLayout>

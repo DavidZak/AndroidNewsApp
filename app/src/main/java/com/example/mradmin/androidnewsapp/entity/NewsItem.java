@@ -1,7 +1,6 @@
-package com.example.mradmin.androidnewsapp.Entities;
+package com.example.mradmin.androidnewsapp.entity;
 
 import java.io.Serializable;
-import java.net.URLEncoder;
 
 /**
  * Created by mrAdmin on 25.08.2017.
