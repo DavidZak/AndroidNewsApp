@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_new"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="New" />
-
-    <item
-        android:id="@+id/navigation_top"
+        android:id="@+id/navigation_one"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Top" />
+        android:title="Life"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_two"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="NY Times"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_three"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Al Jazeera"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_four"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="RT"
+        app:showAsAction="ifRoom"/>
 
 </menu>

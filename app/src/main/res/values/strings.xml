@@ -6,4 +6,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="popup_refresh_info">Swipe down to refresh news</string>
+    <string name="link_not_exists">Link is not exists</string>
+
 </resources>
