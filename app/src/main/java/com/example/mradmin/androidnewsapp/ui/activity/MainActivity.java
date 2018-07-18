@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvToolbarTitle;
     @BindView(R.id.ib_refresh_info)
     ImageButton ibRefreshInfo;
+    @BindView(R.id.navigation)
+    BottomNavigationView navigationView;
 
     private static int navSelector = 0;
 
@@ -86,8 +88,7 @@ public class MainActivity extends AppCompatActivity {
         logos = new Drawable[]{getDrawable(R.drawable.life_logo), getDrawable(R.drawable.nytimes_logo), getDrawable(R.drawable.aljazeera_logo), getDrawable(R.drawable.rt_logo)};
         titles = new String[]{"Life.ru", "New York Times", "Al Jazeera", "RT"};
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         navSelector = 0;
         initNewsSelector();

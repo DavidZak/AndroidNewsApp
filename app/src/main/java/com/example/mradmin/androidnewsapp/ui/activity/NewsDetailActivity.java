@@ -45,9 +45,7 @@ public class NewsDetailActivity extends AppCompatActivity {
             finish();
         } else {
             if (curNewsItem.getImage() != null && !curNewsItem.getImage().isEmpty()) {
-                Picasso.with(this).load(curNewsItem.getImage()).placeholder(R.mipmap.ic_launcher).into(imageView);
-            } else {
-                imageView.setImageResource(R.mipmap.ic_launcher);
+                Picasso.with(this).load(curNewsItem.getImage()).placeholder(R.drawable.noimage).into(imageView);
             }
 
             textViewTitle.setText(curNewsItem.getTitle());

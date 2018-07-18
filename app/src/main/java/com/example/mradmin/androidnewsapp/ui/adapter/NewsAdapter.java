@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.example.mradmin.androidnewsapp.R;
 import com.example.mradmin.androidnewsapp.entity.NewsItem;
-import com.example.mradmin.androidnewsapp.util.Util;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -89,9 +88,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.Holder> {
 
         public void bind(final NewsItem curNewsItem){
             if (curNewsItem.getImage() != null && !curNewsItem.getImage().isEmpty()){
-                Picasso.with(itemView.getContext()).load(curNewsItem.getImage()).into(imageView);
-            } else {
-                Util.setViewVisibility(imageView, View.GONE);
+                Picasso.with(itemView.getContext()).load(curNewsItem.getImage()).placeholder(R.drawable.noimage).into(imageView);
             }
 
             textViewTitle.setText(curNewsItem.getTitle());
